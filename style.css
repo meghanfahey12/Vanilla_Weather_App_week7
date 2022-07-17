@@ -106,7 +106,6 @@ li:first-letter{
   position: relative;
   font-size: 16px;
   top: -5;
-
 }
 
 .weather-temperature .active {
@@ -115,19 +114,6 @@ cursor: default;
 }
 .weather-temperature .active:hover {
   text-decoration: none;
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
