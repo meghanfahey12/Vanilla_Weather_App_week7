@@ -102,9 +102,33 @@ li:first-letter{
   line-height: 1;
   font-weight: 400pn;;
 }
-.weather-temperature.units{
+.weather-temperature .units{
   position: relative;
   font-size: 16px;
   top: -5;
 
 }
+
+.weather-temperature .active {
+color: rgb(33,33,33);
+cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
