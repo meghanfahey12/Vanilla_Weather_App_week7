@@ -1,12 +1,4 @@
-.container {
-  max-width: 540px;
-  border: solid;
-  border-radius: 20px;
-  box-shadow: 2px 2px 10px gray;
-  background-color: lightgray;
-  padding-top: 10px;
-  margin-top: 20px;
-}
+
 .weather {
   position: relative;
   font-family: "VT323", monospace;
