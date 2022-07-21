@@ -45,9 +45,7 @@ iconElement.setAttribute("alt", response.data.weather[0].description);
 
 function search(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let city= "New York";
-  let apiUrl = `https://api.openweather.org/data/2.5/weather?
-  q=New York&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweather.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
