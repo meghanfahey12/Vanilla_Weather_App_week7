@@ -106,3 +106,19 @@ cursor: default;
 }
 
 
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date{
+  font-size: 14 px;
+  color: #000;
+  opacity: 0.5;
+}
+.weather-forecast.temperature{
+  font-size: 13px;
+}
+.weather-forecast.temperature.min{
+  opacity: 0.5;
+
+}
