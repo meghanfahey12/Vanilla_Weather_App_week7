@@ -1,9 +1,5 @@
-
-.weather {
-  position: relative;
-  font-family: "VT323", monospace;
-  padding-bottom: 20px;
-  padding-top: 30px;
+body {
+  font-family: arial, sans-serif;
 }
 h1{
 color: #878787;
@@ -13,44 +9,7 @@ line-height: 28.8px;
 text-align: left; 
 margin-bottom: 0;
 }
-.card-body {
-  position: relative;
-  background-color: #fff;
-  border: solid;
-  border-color: lightskyblue;
-  box-shadow: 2px 2px 10px lightskyblue;
-}
-.conditions {
-  font-family: "Times New Roman", monospace;
-  font-size: 45px;
-  text-align: center;
-  position: relative;
-  left: 35px;
-}
-.current {
-  font-family: "Times", monospace;
-  font-size: 40px;
-  position: relative;
-  left: 30px;
-}
-.city {
-  font-size: 40px;
-  font-family: "VT323", monospace;
-}
-.search {
-  padding-top: 10px;
-}
-.weatherimg {
-  max-width: 90px;
-  position: relative;
-}
-h6 {
-  font-size: 40px;
-  font-family: "VT323", monospace;
-  position: relative;
-  left: 20px;
-  bottom: 10px;
-}
+
 ul {
   margin: 0;
   padding: 0;
@@ -105,7 +64,6 @@ cursor: default;
   text-decoration: none;
 }
 
-
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
@@ -115,10 +73,12 @@ cursor: default;
   color: #000;
   opacity: 0.5;
 }
+
+.weather-forecast.temperature.min{
+  opacity: 0.5;
+}
 .weather-forecast.temperature{
   font-size: 13px;
 }
-.weather-forecast.temperature.min{
-  opacity: 0.5;
 
-}
+
