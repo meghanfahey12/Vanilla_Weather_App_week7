@@ -15,7 +15,7 @@ function formatDate(timestamp) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
@@ -24,7 +24,7 @@ return `${day} ${hours}:${minutes}`;
 function formatDay(timestamp) {
  let date = new Date(timestamp * 1000);
  let day = date.getDay();
- let days = ["Sun", "Mon", "Tues","Wed","Thur","Fri","Sat"]
+ let days = ["Sun", "Mon", "Tues","Wed","Thur","Fri","Sat"];
 
  return days[day];
 }
@@ -42,8 +42,7 @@ function displayForecast(response) {
         forecastHTML +
         `
   <div class="col-2">
-    <div class="weather-forecast-date">
-    ${formatDay(forecastDay.dt)}
+    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}
     </div>
     <img 
     src="http://openweathermap.org/img/wn/${
@@ -51,11 +50,11 @@ function displayForecast(response) {
     }@2x.png" 
     alt=""
     width="42"/>
-    <div class=" weather-forecast-temperature">
-      <span class="weather-forecast.temperature-max">
+    <div class=" weather-forecast-temperatures">
+      <span class="weather-forecast-temperature-max">
       ${Math.round(forecastDay.temp.max)}°
       </span>
-      <span class="weather-forecast.temperature-min">
+      <span class="weather-forecast-temperature-min">
       ${Math.round(forecastDay.temp.min)}°
       </span>
     </div>
@@ -87,7 +86,7 @@ temperatureElement.innerHTML = Math.round (celsiusTemperature);
 cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = response.data.main.humidity;
-windElement.innerHTML = Math.round(response.data.main.speed);
+windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt*1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
@@ -98,7 +97,8 @@ getForecast(response.data.coord);
 
 function search(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;  axios.get(apiUrl).then(displayTemperature);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;  
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function handleSubmit(event){
@@ -107,7 +107,7 @@ function handleSubmit(event){
   search(cityInputElement.value);
 }
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit)
+form.addEventListener("submit", handleSubmit);
 
 
 search("New York");
