@@ -72,7 +72,7 @@ function displayForecast(response) {
   axios.get(apiUrl).then(displayForecast);
   }
 function displayTemperature(response){
-let temperatureElement = document.querySelector("#temperature");
+let temperatureElement = document.querySelector("#currentTemperature");
 let cityElement = document.querySelector("#city");
 let descriptionElement = document.querySelector("#description");
 let humidityElement = document.querySelector("#humidity");
@@ -82,7 +82,7 @@ let iconElement = document.querySelector("#icon");
 
 celsiusTemperature = response.data.main.temp;
 
-temperatureElement.innerHTML = Math.round (celsiusTemperature);
+temperatureElement.innerHTML = Math.round (response.data.main.temp);
 cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = response.data.main.humidity;
