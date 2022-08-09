@@ -10,14 +10,14 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title> Vanilla Weather App SCP wk7 </title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    </script>    
+    </script> 
+    <link rel="stylesheet" href="style.css" />
+    <title> Vanilla Weather App SCP wk7 </title>   
   </head>
   <body>
     <div class="container">
-      <div class:="weather-app-wrapper">
+      <div class="weather-app-wrapper">
         <div class="weather=app">
           <form id="search-form" class="mb-3">
             <div class="row">
@@ -31,14 +31,16 @@
             />
             </div>
             <div class="col-3">
-            <input type="submit" value="Search" class="btn-btn-primary w-100/">
+            <input type="submit"
+             value="Search" 
+             class="btn-btn-primary w-100"/>
             </div>
             </div>
             </form>
           <div class="overview">
     <h1 id="city"></h1>
     <ul>
-      <li>Last Updated at <span id="date"></span></li>
+      <li>Last Updated: <span id="date"></span></li>
       <li id="description"></li>
     </ul>
     </div>
@@ -59,14 +61,15 @@
           </div>
           <div class="col-6">
           <ul>
-            <li>Humidity: <span id="humidity"></span></li>
-            <li>Wind: <span id= "wind"></span></li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id= "wind"></span>mph</li>
           </ul>
           </div>
-          <div class="weather-forecast-date" id="forecast">
+          </div>
+          <div class="weather-forecast" id="forecast">
           </div>
           <small><a href= "https://github.com/meghanfahey12/Vanilla_Weather_App_week7">
-            Open-Source code,</a> by Meghan Fahey </small> 
+            Open-Source code</a> by Meghan Fahey </small> 
 			</div>
     </div>
   </div>
